@@ -23,21 +23,10 @@ struct Question: Codable {
     let score: Int
 
     enum CodingKeys: String, CodingKey {
-        case question, answers
+        case question = "question"
+        case answers = "answers"
         case questionImageURL = "questionImageUrl"
-        case correctAnswer, score
+        case correctAnswer = "correctAnswer"
+        case score = "score"
     }
 }
-
-// MARK: - Answers
-//struct Answers: Codable {
-//    let a, b: String
-//    let c, d: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case a = "A"
-//        case b = "B"
-//        case c = "C"
-//        case d = "D"
-//    }
-//}

@@ -172,6 +172,7 @@ extension QuestionsViewController: UITableViewDataSource {
         cell.configure(title: answerValues[indexPath.row])
         cell.buttonTappedAction = { [self] in
             
+            //change each cell's userInteraction after pressed button
             for row in 0..<questions[self.questionIndex].answers.count {
                 if let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? AnswerTableViewCell {
                     cell.isUserInteractionEnabled = false
@@ -185,7 +186,7 @@ extension QuestionsViewController: UITableViewDataSource {
                 self.totalScore = self.totalScore + questions[self.questionIndex].score
             } else {
                 cell.setButtonBackgroundColor(.red)
-                let correctButtonTag = answerKeys.firstIndex(of: correctAnswer)
+                let correctButtonTag = answerKeys.firstIndex(of: correctAnswer) // to find correctAnswer's cell
                 if let cell = tableView.cellForRow(at: IndexPath(row: correctButtonTag ?? 0, section: 0)) as? AnswerTableViewCell {
                     cell.setButtonBackgroundColor(.green)
                 }
@@ -206,11 +207,13 @@ extension QuestionsViewController: UITableViewDataSource {
             self.questionNumber = self.questionNumber + 1
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                guard let collectionViewIndexPath = self.collectionView.indexPath(for: self.collectionViewCell) else { return }
                 
+                //push collectionView's cell to next cell
+                guard let collectionViewIndexPath = self.collectionView.indexPath(for: self.collectionViewCell) else { return }
                 let nextIndex = IndexPath(item: collectionViewIndexPath.item + 1, section: collectionViewIndexPath.section)
                 self.collectionView.scrollToItem(at: nextIndex, at: .centeredHorizontally, animated: false)
                 
+                //change each cell's backgroundColor after pressed button
                 for row in 0..<questions[self.questionIndex].answers.count {
                     if let cell = tableView.cellForRow(at: IndexPath(row: row, section: 0)) as? AnswerTableViewCell {
                         cell.setButtonBackgroundColor(.white)

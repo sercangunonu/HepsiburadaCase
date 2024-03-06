@@ -21,6 +21,8 @@ final class QuestionsViewModel: HBBaseViewModel {
             DispatchQueue.main.async {
                 switch response {
                 case .success(let response):
+                    
+                    // order of answers mixed.
                     let answers = response.questions.map { $0.answers }
                     var shuffledAnswers: [[String: String]] = []
                     

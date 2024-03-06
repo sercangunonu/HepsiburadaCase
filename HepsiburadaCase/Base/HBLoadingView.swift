@@ -15,7 +15,6 @@ class HBLoadingView: UIView {
         super.awakeFromNib()
     }
     
-    
     init() {
         super.init(frame: .zero)
         setupLoadingIndicator()

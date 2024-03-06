@@ -31,7 +31,6 @@ class HBBaseViewController<TViewModel: HBBaseViewModel>: UIViewController {
             self?.navigationController?.popViewController(animated: false)
         }
         alertController.addAction(okAction)
-        
         present(alertController, animated: true, completion: nil)
     }
 }
