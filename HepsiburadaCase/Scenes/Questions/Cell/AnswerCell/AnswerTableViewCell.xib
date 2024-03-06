@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AnswerTableViewCell" rowHeight="65" id="B8c-Rn-UPm" customClass="AnswerTableViewCell" customModule="HepsiburadaCase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="238" height="65"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B8c-Rn-UPm" id="J1W-3Z-Gjn">
+                <rect key="frame" x="0.0" y="0.0" width="238" height="65"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEA-0d-zgD">
+                        <rect key="frame" x="0.0" y="10" width="238" height="45"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="KLA-ux-rtY"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" systemColor="systemOrangeColor"/>
+                        </state>
+                        <connections>
+                            <action selector="answerButtonTapped:" destination="B8c-Rn-UPm" eventType="touchUpInside" id="RcT-kz-T8u"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QEA-0d-zgD" firstAttribute="top" secondItem="J1W-3Z-Gjn" secondAttribute="top" constant="10" id="IiZ-Gj-lFT"/>
+                    <constraint firstAttribute="trailing" secondItem="QEA-0d-zgD" secondAttribute="trailing" id="k6G-8c-fe9"/>
+                    <constraint firstItem="QEA-0d-zgD" firstAttribute="leading" secondItem="J1W-3Z-Gjn" secondAttribute="leading" id="poS-lF-g6O"/>
+                    <constraint firstAttribute="bottom" secondItem="QEA-0d-zgD" secondAttribute="bottom" constant="10" id="rkO-AR-pdJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="answerButton" destination="QEA-0d-zgD" id="isA-eR-nPv"/>
+            </connections>
+            <point key="canvasLocation" x="30.534351145038165" y="-10.91549295774648"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
